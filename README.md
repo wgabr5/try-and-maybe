@@ -9,11 +9,11 @@ echo ""
 PS3='Please enter your choice: '
 options=("Bypass on Recovery" "Disable Notification (SIP)" "Disable Notification (Recovery)" "Check MDM Enrollment" "Thoát")
 select opt in "${options[@]}"; do
-    case $opt in
-    	"Bypass on Recovery")
-    		echo -e "${GRN}Bypass on Recovery"
-        		if [ -d "/Volumes/Macintosh HD - Data" ]; then
-       			diskutil rename "Macintosh HD - Data" "Data"
+	case $opt in
+	"Bypass on Recovery")
+		echo -e "${GRN}Bypass on Recovery"
+		if [ -d "/Volumes/Macintosh HD - Data" ]; then
+   			diskutil rename "Macintosh HD - Data" "Data"
 		fi
 		echo -e "${GRN}Tạo người dùng mới"
         echo -e "${BLU}Nhấn Enter để chuyển bước tiếp theo, có thể không điền sẽ tự động nhận giá trị mặc định"
